@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Harmony Dream - Home</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <!-- CSS, Bootstrap e Icons do google -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" /></head>
-<body>
-    <nav class="d-flex flex-column flex-shrink-0 p-3 text-secondary bg-secondary sidebar" style="width: 280px;">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body class="d-flex min-vh-100 bg-primary">
+    <nav class="d-flex flex-column flex-shrink-0 p-3 text-secondary bg-secondary sidebar sticky-top vh-100" style="width: 280px;">
         <a href="index.html" class="mb-3 mb-md-0 me-md-auto text-decoration-none">
-            <img src="assets/HD-logo.jpg" alt="Logo do Harmony Dream" class="mx-auto d-block" width="50%">
+            <img src="assets/HD-logo.jpg" alt="Logo do Harmony Dream" class="mx-auto d-block w-50">
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto gap-2">
@@ -49,7 +54,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-secondary d-flex gap-3">
+                <a href="#" class="nav-link text-secondary d-flex gap-3 rounded">
                     <span class="material-symbols-outlined">
                         person
                     </span>
@@ -58,7 +63,7 @@
             </li>
         </ul>
         <hr>
-        <div>
+        <div class="nav nav-pills flex-column">
             <a href="#" class="nav-link text-secondary d-flex gap-3">
                 <span class="material-symbols-outlined">
                     logout
@@ -68,9 +73,28 @@
         </div>
     </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <main class="flex-grow-1">
+        <section class="w-100 musica-destaque d-flex bg-gradient">
+            <img src="assets/validation.jpg" class="object-fit-cover w-25" alt="">
+            <div class="flex-grow-1 text-black d-flex flex-column justify-content-around align-items-center p-4">
+                <p class="titulo-musica-destaque">Waiting to Fly</p>
+                <p class="text-dark titulo-musica-destaque fst-italic">Validation</p>
+                <a href="#" class="btn p-4 fs-3 px-5 rounded-pill bg-secondary text-white botao" role="button" data-bs-toggle="button">Ouvir Agora</a>
+                <p class="fs-3">Yun Li - 512 mil visualizações</p>
+            </div>
+        </section>
+        <h1>SAFA</h1>
+        <h1>SAFA</h1>
+        <h1>SAFA</h1>
+        <h1>SAFA</h1>
+        <h1>SAFA</h1>
+        <h1>SAFA</h1>
+        <h1>SAFA</h1>
+        <h1>SAFA</h1>
+        <h1>SAFA</h1>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

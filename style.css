@@ -1,18 +1,22 @@
 :root {
-    --bs-secondary-rgb: #613659;
-}
-
-body {
-    display: flex;
-    min-height: 100vh;
+    --cor-primaria: #211522;
+    --cor-secundaria: #613659;
+    --cor-terciaria: #D3B1C2;
+    --cor-quartenaria: #C197D2;
 }
 
 .bg-secondary {
-    background-color: var(--bs-secondary-rgb) !important;
+    background-color: var(--cor-secundaria) !important;
 }
 
 .sidebar {
     font-size: 1.7em;
+}
+
+.sidebar :is(.nav, div) a:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria) !important;
+    transition: .4s;
 }
 
 .sidebar .material-symbols-outlined {
@@ -20,5 +24,25 @@ body {
 }
 
 .text-secondary {
-    color: #D3B1C2 !important;
+    color: var(--cor-terciaria) !important;
+}
+
+.bg-primary {
+    background-color: var(--cor-primaria) !important;
+}
+
+.musica-destaque {
+    height: 700px;
+}
+
+.bg-gradient {
+    background-image: linear-gradient(to right, transparent, var(--cor-terciaria)) !important;
+}
+
+.titulo-musica-destaque {
+    font-size: 3em;
+}
+
+.botao:hover {
+    background-color: #462640 !important;
 }
