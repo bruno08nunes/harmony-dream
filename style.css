@@ -33,7 +33,7 @@
 }
 
 .musica-destaque {
-    height: 700px;
+    height: 600px;
 }
 
 .bg-gradient {
@@ -57,7 +57,7 @@
 }
 
 .musicas-card {
-    width: 300px;
+    width: 100px;
 }
 
 .musicas-card:hover {
