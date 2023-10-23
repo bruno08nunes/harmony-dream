@@ -11,6 +11,7 @@
 
 .sidebar {
     font-size: 1.7em;
+    width: 280px;
 }
 
 .sidebar :is(.nav, div) a:hover {
@@ -45,4 +46,24 @@
 
 .botao:hover {
     background-color: #462640 !important;
+}
+
+.categorias {
+    max-width: calc(100vw - 300px) !important;
+}
+
+.categorias li:hover {
+    transform: scale(1.13);
+}
+
+.musicas-card {
+    width: 300px;
+}
+
+.musicas-card:hover {
+    transform: scale(1.03);
+}
+
+.musicas-card img {
+    aspect-ratio: 1 / 1;
 }
