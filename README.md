@@ -33,4 +33,4 @@
 ## 7. Considerações Finais
 <p>Esse documento trata sobre os requisitos do site. Os objetivos podem mudar conforme o tempo e recomendações.</p>
 
-<p>Link do site <a href="https://bruno08nunes.github.io/harmony-dream/index.html" target="_blank">Informe Geral</a></p>
+<p>Link do site <a href="https://bruno08nunes.github.io/harmony-dream/index.html" target="_blank">Harmony Dream</a></p>
