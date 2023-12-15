@@ -1,0 +1,30 @@
+{
+    "yun-li": {
+        "nome": "Yun Li",
+        "src": "validation.jpg",
+        "seguidores": 150,
+        "seguindo": 3,
+        "playlists": 8
+    },
+    "ds-luqi": {
+        "nome": "D$ Luqi",
+        "src": "100k.jpg",
+        "seguidores": 340,
+        "seguindo": 48,
+        "playlists": 21
+    },
+    "ef": {
+        "nome": "EF",
+        "src": "amiga-da-minha-mulher.jpg",
+        "seguidores": 48,
+        "seguindo": 6,
+        "playlists": 2
+    },
+    "tokyo-marui": {
+        "nome": "Tokyo Marui",
+        "src": "savage.jpg",
+        "seguidores": 30,
+        "seguindo": 1,
+        "playlists": 3
+    }
+}

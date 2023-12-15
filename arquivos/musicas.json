@@ -1,0 +1,116 @@
+{
+    "waiting-to-fly": {
+        "nome": "Waiting to Fly",
+        "album": "Validation",
+        "artista": "Yun Li",
+        "src": "validation.jpg"
+    },
+    "vivendo-o-passado": {
+        "nome": "Vivendo o Passado",
+        "album": "Drop - Animado",
+        "artista": "TakaB",
+        "src": "vivendo-o-passado.jpg"
+    },
+    "morgana": {
+        "nome": "Morgana",
+        "album": null,
+        "artista": "Kamaitachi",
+        "src": "morgana.jpg"
+    },
+    "wheel-of-fortune": {
+        "nome": "Wheel of Fortune",
+        "album": null,
+        "artista": "Deathsuit",
+        "src": "deathsuit.jpg"
+    },
+    "navio-de-teseu": {
+        "nome": "Navio de Teseu",
+        "album": "A Vida de Lucas",
+        "artista": "pairoT",
+        "src": "navio-teseu.jpg"
+    },
+    "todas-as-cores": {
+        "nome": "Todas as Cores",
+        "album": null,
+        "artista": "Matheus VPS",
+        "src": "todas-as-cores.jpg"
+    },
+    "bubbaloo": {
+        "nome": "Bubbaloo",
+        "album": null,
+        "artista": "Biffe",
+        "src": "bubbaloo.jpg"
+    },
+    "amiga-da-minha-mulher": {
+        "nome": "Amiga da Minha Mulher",
+        "album": null,
+        "artista": "EF",
+        "src": "amiga-da-minha-mulher.jpg"
+    },
+    "odisseia": {
+        "nome": "Odisseia",
+        "album": null,
+        "artista": "LVCAS",
+        "src": "odisseia.jpg"
+    },
+    "dancando-entre-facas-e-balas": {
+        "nome": "Dançando entre Facas e Balas",
+        "album": "Bonda 4",
+        "artista": "MC VV",
+        "src": "dançando.jpg"
+    },
+    "ordem-e-caos": {
+        "nome": "Ordem e Caos",
+        "album": "Drop - A Ordem",
+        "artista": "Anny",
+        "src": "ordem-caos.jpg"
+    },
+    "all-star": {
+        "nome": "All-Star",
+        "album": "Para Quando o Arco-Íris Encontrar o Pote de Ouro",
+        "artista": "Nando Reis",
+        "src": "all-star-azul.jpg"
+    },
+    "paper-rings": {
+        "nome": "Paper Rings",
+        "album": "Lover",
+        "artista": "Taylor Swift",
+        "src": "paper-rings.jpg"
+    },
+    "i-wanna-be-yours": {
+        "nome": "I Wanna Be Yours",
+        "album": "AM",
+        "artista": "Arctic Monkeys",
+        "src": "i-wanna-be-yours.jpg"
+    },
+    "serenata-existencialista": {
+        "nome": "Serenata Existencialista",
+        "album": "Herói do Futuro",
+        "artista": "O Grilo",
+        "src": "serenata-existencialista.jpg"
+    },
+    "100k": {
+        "nome": "100k",
+        "album": "Underground Stars",
+        "artista": "D$ Luqi",
+        "src": "100k.jpg"
+    },
+    "savage": {
+        "nome": "Savage",
+        "album": "Lullabies for Demons",
+        "artista": "Tokyo Marui",
+        "src": "savage.jpg"
+    },
+    "arrogante": {
+        "nome": "Arrogante",
+        "album": null,
+        "artista": "Elkay",
+        "src": "arrogante.jpg"
+    },
+    "death-note": {
+        "nome": "Death Note",
+        "album": null,
+        "artista": "Uxie Kid",
+        "src": "death-note.jpg"
+    }
+}

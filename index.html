@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -10,61 +10,118 @@
     <!-- CSS, Bootstrap e Icons do google -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+        <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="d-flex min-vh-100 bg-primary">
-    <nav class="d-flex flex-column flex-shrink-0 p-3 text-secondary bg-secondary sidebar sticky-top vh-100">
-        <a href="index.html" class="mb-3 mb-md-0 me-md-auto text-decoration-none">
-            <img src="assets/HD-logo.jpg" alt="Logo do Harmony Dream" class="mx-auto d-block w-50">
-        </a>
-        <hr>
-        <ul class="nav nav-pills flex-column mb-auto gap-2">
-            <li class="nav-item">
-                <a href="#" class="nav-link text-secondary d-flex gap-3 align-items-center" aria-current="page">
-                    <span class="material-symbols-outlined">
-                        home
-                    </span>
-                    <span>Home</span> <!--  class="flex-grow-1 text-center" -->
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-secondary d-flex gap-3">
-                    <span class="material-symbols-outlined">
-                        search
-                    </span>
-                    <span>Buscar</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-secondary d-flex gap-3">
-                    <span class="material-symbols-outlined">
-                        settings
-                    </span>
-                    <span>Opções</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-secondary d-flex gap-3">
-                    <span class="material-symbols-outlined">
-                        library_music
-                    </span>
-                    <span>Biblioteca</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-secondary d-flex gap-3 rounded">
-                    <span class="material-symbols-outlined">
-                        person
-                    </span>
-                    <span>Perfil</span>
-                </a>
-            </li>
-        </ul>
-        <hr>
-        <div class="nav nav-pills flex-column">
-            <a href="#" class="nav-link text-secondary d-flex gap-3">
+<body class="container-fluid min-vh-100 row pe-0">
+    <!-- Cabeçalho que aparece em telas pequenas -->
+    <header class="d-flex d-md-none position-fixed justify-content-end z-3">
+        <nav class="navbar">
+            <button class="btn dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="index.html" class="dropdown-item d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined">
+                            home
+                        </span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <label for="search-mobile" href="#" class="dropdown-item d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                        <span>Buscar</span>
+                    </label>
+                </li>
+                <li>
+                    <a href="paginas/configs.html" class="dropdown-item d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined">
+                            settings
+                        </span>
+                        <span>Opções</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="paginas/biblioteca.html" class="dropdown-item d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined">
+                            library_music
+                        </span>
+                        <span>Biblioteca</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="paginas/perfil.html" class="dropdown-item d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                        <span>Perfil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="paginas/login.html" class="dropdown-item d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined">
+                            logout
+                        </span>
+                        <span>Deslogar</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <search class="d-md-none d-flex p-3 justify-content-center">
+        <input type="search" name="search-mobile" id="search-mobile" class="form-control col-4">
+    </search>
+
+    <!-- Sidebar para telas grandes -->
+    <div class="d-none d-md-block col-md-4 col-lg-3 col-xxl-2"></div> <!-- Forma para a sidebar que não ocupa espaço -->
+    <nav class="flex-column d-none d-md-flex col-md-4 col-lg-3 col-xxl-2 sidebar p-3 navbar vh-100 position-fixed z-2 overflow-auto">
+        <div class="gap-1 gap-xl-2 d-flex flex-column gap">
+            <a href="index.html" class="nav-link navbar-brand">
+                <img src="assets/HD-logo.jpg" alt="Logo do Harmony Dream" class="mx-auto d-block w-25 logo">
+            </a>
+            <hr class="m-0">
+            <a href="index.html" class="nav-link d-flex gap-3 align-items-center rounded-3 p-2" aria-current="page">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+                <span>Home</span>
+            </a>
+            <label class="nav-link d-flex gap-3 align-items-center rounded-3 p-2" aria-current="page">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+                <input type="search" name="search" id="search" placeholder="Buscar" autocomplete="off">
+            </label>
+            <a href="paginas/configs.html" class="nav-link d-flex gap-3 align-items-center rounded-3 p-2" aria-current="page">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+                <span>Opções</span>
+            </a>
+            <a href="paginas/biblioteca.html" class="nav-link d-flex gap-3 align-items-center rounded-3 p-2" aria-current="page">
+                <span class="material-symbols-outlined">
+                    library_music
+                </span>
+                <span>Biblioteca</span>
+            </a>
+            <a href="paginas/perfil.html" class="nav-link d-flex gap-3 align-items-center rounded-3 p-2" aria-current="page">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+                <span>Perfil</span>
+            </a>
+        </div>
+        <div class="w-100 d-flex flex-column">
+            <hr class="m-2 mb-3">
+            <a href="paginas/login.html" class="nav-link d-flex gap-3 align-items-center rounded-3 p-2" aria-current="page">
                 <span class="material-symbols-outlined">
                     logout
                 </span>
@@ -73,206 +130,184 @@
         </div>
     </nav>
 
-    <main class="flex-grow-1 text-white">
-        <section class="w-100 musica-destaque d-flex bg-gradient">
-            <img src="assets/validation.jpg" class="object-fit-cover w-25" alt="Capa do álbum Validation, com um gato humanóide na frente de uma janela">
-            <div class="flex-grow-1 text-black d-flex flex-column justify-content-around align-items-center p-4">
-                <p class="titulo-musica-destaque">Waiting to Fly</p>
-                <p class="text-dark titulo-musica-destaque fst-italic">Validation</p>
-                <a href="musicas/waiting-to-fly.html" class="btn p-4 fs-3 px-5 rounded-pill bg-secondary text-white botao">Ouvir Agora</a>
-                <p class="fs-3">Yun Li - 512 mil visualizações</p>
+    <!-- Parte principal -->
+    <main class="p-0 col-md-8 col-lg-9 col-xxl-10">
+        <!-- Música destaque / carrossel -->
+        <section id="carrosel" class="carousel slide destaque carousel-dark bg-gradient" data-bs-ride="carousel">
+            <div class="carousel-indicators d-none d-lg-flex">
+                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner h-100 carousel-fade">
+                <div class="carousel-item active d-flex h-100">
+                    <img src="assets/validation.jpg" class="d-block col-12 col-lg-4 h-100 object-fit-cover" alt="...">
+                    <div class="flex-grow-1 text-black d-flex flex-column justify-content-around align-items-center p-4 carousel-caption top-0 end-0 col-12 h-100">
+                        <p class="titulo-musica-destaque">Waiting to Fly</p>
+                        <p class="text-dark titulo-musica-destaque fst-italic">Validation</p>
+                        <a href="paginas/musica.html?musica=waiting-to-fly" class="btn p-4 fs-3 px-5 rounded-pill text-white botao">Ouvir Agora</a>
+                        <p class="fs-3">Yun Li</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="assets/vivendo-o-passado.jpg" class="d-block col-12 col-lg-4 h-100 object-fit-cover" alt="...">
+                    <div class="flex-grow-1 text-black d-flex flex-column justify-content-around align-items-center p-4 carousel-caption top-0 end-0 col-12 h-100">
+                        <p class="titulo-musica-destaque">Vivendo o Passado</p>
+                        <p class="text-dark titulo-musica-destaque fst-italic">Drop - Animado</p>
+                        <a href="paginas/musica.html?musica=vivendo-o-passado" class="btn p-4 fs-3 px-5 rounded-pill text-white botao">Ouvir Agora</a>
+                        <p class="fs-3">TakaB</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="assets/morgana.jpg" class="d-block col-12 col-lg-4 h-100 object-fit-cover" alt="...">
+                    <div class="flex-grow-1 text-black d-flex flex-column justify-content-around align-items-center p-4 carousel-caption top-0 end-0 col-12 h-100">
+                        <p class="titulo-musica-destaque">Morgana</p>
+                        <p class="text-dark titulo-musica-destaque fst-italic">Single</p>
+                        <a href="paginas/musica.html?musica=morgana" class="btn p-4 fs-3 px-5 rounded-pill text-white botao">Ouvir Agora</a>
+                        <p class="fs-3">Kamaitachi</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev justify-content-start d-none d-lg-flex" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next justify-content-end d-none d-lg-flex" type="button" data-bs-target="#carrosel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </section>
-        <nav class="navbar navbar-expand-sm sticky-top bg-primary">
-            <ul class="nav gap-4 py-3 px-5 fs-5 overflow-auto flex-nowrap categorias">
-                <li class="nav-item bg-dark">
+
+        <!-- Sessão de links para selecionar o gênero musical -->
+        <nav class="navbar navbar-expand-sm sticky-md-top nav-generos text-center z-1">
+            <ul class="nav gap-4 py-3 px-5 fs-5 overflow-auto flex-nowrap categorias w-100">
+                <li class="nav-item bg-dark flex-grow-1">
                   <a class="nav-link text-white px-4" href="#">Rock</a>
                 </li>
-                <li class="nav-item bg-dark">
+                <li class="nav-item bg-dark flex-grow-1">
                   <a class="nav-link text-white px-4" href="#">Funk</a>
                 </li>
-                <li class="nav-item bg-dark">
+                <li class="nav-item bg-dark flex-grow-1">
                   <a class="nav-link text-white px-4" href="#">Sertanejo</a>
                 </li>
-                <li class="nav-item bg-dark">
+                <li class="nav-item bg-dark flex-grow-1">
                   <a class="nav-link text-white px-4" href="#">Jazz</a>
                 </li>
-                <li class="nav-item bg-dark">
+                <li class="nav-item bg-dark flex-grow-1">
                   <a class="nav-link text-white px-4" href="#">Country</a>
                 </li>
-                <li class="nav-item bg-dark">
+                <li class="nav-item bg-dark flex-grow-1">
                   <a class="nav-link text-white px-4" href="#">Clássico</a>
                 </li>
-                <li class="nav-item bg-dark">
+                <li class="nav-item bg-dark flex-grow-1">
                   <a class="nav-link text-white px-4" href="#">Pagode</a>
                 </li>
-                <li class="nav-item bg-dark">
+                <li class="nav-item bg-dark flex-grow-1">
                   <a class="nav-link text-white px-4" href="#">Samba</a>
                 </li>
             </ul>
         </nav>
-        <h2 class="px-5 fs-1">Recomendados</h2>
-        <section class="d-flex text-center px-5 gap-5 py-3">
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/navio-teseu.jpg" alt="Capa do álbum A Vida de Lucas,">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Navio de Teseu</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Pairot</p>
-                    </div>
-                </div>
+
+        <!-- Seções de tipos de música -->
+        <h2 class="px-5 fs-1 text-white">Recomendados</h2>
+        <section class="row text-center px-5 gap-5 py-3 m-0 justify-content-center">
+            <a href="paginas/musica.html?musica=wheel-of-fortune" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/deathsuit.jpg" alt="Capa da música Wheel of Fortune">
+                <h4 class="fs-5 mt-3">Wheel of Fortune</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Deathsuit</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/morgana.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Morgana</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Kamaitachi</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=navio-de-teseu" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3 d-lg-none d-xl-block">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/navio-teseu.jpg" alt="Capa do álbum A Vida de Lucas">
+                <h4 class="fs-5 mt-3">Navio de Teseu</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Pairot</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/todas-as-cores.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Todas as Cores</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Matheus VPS</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=todas-as-cores" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/todas-as-cores.jpg" alt="Capa da música Todas as Cores">
+                <h4 class="fs-5 mt-3">Todas as Cores</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Matheus VPS</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/bubbaloo.jpg">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Bubbaloo</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Biffe</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=bubbaloo" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/bubbaloo.jpg" alt="Capa da música Bubbaloo">
+                <h4 class="fs-5 mt-3">Bubbaloo</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Biffe</p>
+            </a>
+        </section>
+        
+        <h2 class="px-5 fs-1 text-white">Descobertas</h2>
+        <section class="row text-center px-5 gap-5 py-3 m-0 justify-content-center">
+            <a href="paginas/musica.html?musica=amiga-da-minha-mulher" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3 d-lg-none d-xl-block">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/amiga-da-minha-mulher.jpg" alt="Capa da música Amiga da Minha Mulher (EF)">
+                <h4 class="fs-5 mt-3">Amiga da Minha Mulher</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">EF</p>
+            </a>
+            <a href="paginas/musica.html?musica=odisseia" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/odisseia.jpg" alt="Capa da música Odisseia">
+                <h4 class="fs-5 mt-3">Odisseia</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">LVCAS</p>
+            </a>
+            <a href="paginas/musica.html?musica=dancando-entre-facas-e-balas" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/dançando.jpg" alt="Capa da música Dançando entre Facas e Balas">
+                <h4 class="fs-5 mt-3">Dançando entre Facas e Balas</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">MC VV</p>
+            </a>
+            <a href="paginas/musica.html?musica=ordem-e-caos" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/ordem-caos.jpg" alt="Capa da música Ordem e Caos">
+                <h4 class="fs-5 mt-3">Ordem e Caos</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Anny</p>
             </a>
         </section>
 
-        <h2 class="px-5 fs-1 py-2">Descobertas</h2>
-        <section class="d-flex text-center px-5 gap-5 py-3">
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/amiga-da-minha-mulher.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Amiga da Minha Mulher</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">EF</p>
-                    </div>
-                </div>
+        <h2 class="px-5 fs-1 text-white">Para os Apaixonados</h2>
+        <section class="row text-center px-5 gap-5 py-3 m-0 justify-content-center">
+            <a href="paginas/musica.html?musica=all-star" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3 d-lg-none d-xl-block">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/all-star-azul.jpg" alt="Capa da música All Star (Nando Reis)">
+                <h4 class="fs-5 mt-3">All Star</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Nando Reis</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/odisseia.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Odisseia</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">LVCAS</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=paper-rings" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/paper-rings.jpg" alt="Capa da música Paper Rings">
+                <h4 class="fs-5 mt-3">Paper Rings</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Taylor Swift</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/vivendo-o-passado.jpg">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Vivendo o Passado</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">TakaB</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=i-wanna-be-yours" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/i-wanna-be-yours.jpg" alt="Capa da música I Wanna Be Yours">
+                <h4 class="fs-5 mt-3">I Wanna Be Yours</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Arctic Monkeys</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/dançando.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Dançando Entre Facas e Balas</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">MC VV</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=serenata-existencialista" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/serenata-existencialista.jpg" alt="Capa da música Serenata Existencialista">
+                <h4 class="fs-5 mt-3">Serenata Existencialista</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">O Grilo</p>
             </a>
         </section>
 
-        <h2 class="px-5 fs-1 py-2">Para os Apaixonados</h2>
-        <section class="d-flex text-center px-5 gap-5 py-3">
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/all-star-azul.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">All Star</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Nando Reis</p>
-                    </div>
-                </div>
+        <h2 class="px-5 fs-1 text-white">As Melhores para Festas</h2>
+        <section class="row text-center px-5 gap-5 py-3 m-0 justify-content-center">
+            <a href="paginas/musica.html?musica=100k" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3 d-lg-none d-xl-block">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/100k.jpg" alt="Capa do EP Underground Stars">
+                <h4 class="fs-5 mt-3">100k</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">D$ Luqi</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/paper-rings.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Paper Rings</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Taylor Swift</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=savage" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/savage.jpg" alt="Capa do EP Lullabies for Demons">
+                <h4 class="fs-5 mt-3">Savage</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Tokyo Marui</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/i-wanna-be-yours.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">I Wanna Be Yours</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Arctic Monkeys</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=arrogante" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/arrogante.jpg" alt="Capa da música Arrogante">
+                <h4 class="fs-5 mt-3">Arrogantes</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Elkay</p>
             </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/serenata-existencialista.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Serenata Existencialista</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">O Grilo</p>
-                    </div>
-                </div>
-            </a>
-        </section>
-
-        <h2 class="px-5 fs-1 py-2">As Melhores para Festas</h2>
-        <section class="d-flex text-center px-5 gap-5 py-3">
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/100k.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">100k</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">D$ Luqi</p>
-                    </div>
-                </div>
-            </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/savage.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Savage</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Tokyo Marui</p>
-                    </div>
-                </div>
-            </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/arrogante.jpg">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Arrogante</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Elkay</p>
-                    </div>
-                </div>
-            </a>
-            <a href="musicas/waiting-to-fly.html" class="text-decoration-none flex-grow-1 d-flex">
-                <div class="card bg-secondary musicas-card h-100 flex-grow-1 flex-shrink-1">
-                    <img class="card-img-top w-75 mt-3 mx-auto d-block object-fit-cover" src="assets/death-note.jpg" alt="Card image">
-                    <div class="card-body text-white">
-                      <h4 class="card-title fs-5">Death Note</h4>
-                      <p class="card-text fs-5 text-white-50 fst-italic">Uxie Kid</p>
-                    </div>
-                </div>
+            <a href="paginas/musica.html?musica=death-note" class="text-decoration-none text-white col-lg col-sm-5 col-12 musicas-card px-3 py-3 rounded-3">
+                <img class="w-100 mx-auto d-block object-fit-cover rounded-2" src="assets/death-note.jpg" alt="Capa da música Death Note">
+                <h4 class="fs-5 mt-3">Death Note</h4>
+                <p class="fs-5 text-white-50 fst-italic mb-0">Uxie Kid</p>
             </a>
         </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -5,34 +5,91 @@
     --cor-quartenaria: #C197D2;
 }
 
-.bg-secondary {
-    background-color: var(--cor-secundaria) !important;
+html {
+    margin-right: -15px;
 }
 
-.sidebar {
+body {
+    background-color: var(--cor-primaria);
+}
+
+button.btn.dropdown-toggle, button.btn.dropdown-toggle .material-symbols-outlined {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    font-size: 1.35em;
+}
+
+:is(.dropdown-menu, .sidebar) {
     font-size: 1.7em;
-    width: 280px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 
-.sidebar :is(.nav, div) a:hover {
+.dropdown-menu {
+    font-size: inherit;
+}
+
+:is(.dropdown-menu, .sidebar) :is(a, label, button) {
+    color: var(--cor-terciaria);
+}
+
+:is(.dropdown-menu, .sidebar) :is(a:hover:has(:not(img)), label:hover, button:hover ) {
     background-color: var(--cor-terciaria);
-    color: var(--cor-secundaria) !important;
+    color: var(--cor-secundaria);
     transition: .4s;
+    cursor: pointer;
 }
 
-.sidebar .material-symbols-outlined {
+label:hover {
+    & #search {
+        color: var(--cor-secundaria);
+        &::placeholder {
+            color: var(--cor-secundaria);
+        }
+    }
+}
+
+#search {
+    width: 70%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    margin: 0;
+    transition: 1s;
+    background-color: transparent;
+    color: var(--cor-terciaria);
+    &::placeholder {
+        color: var(--cor-terciaria);
+    }
+}
+
+search {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.404);
+    opacity: 0;
+    z-index: -1;
+}
+
+search:has(input:focus) {
+    opacity: 1;
+    z-index: 3;
+}
+
+:is(.dropdown-menu, .sidebar) .material-symbols-outlined {
     font-size: 1.6em;
 }
 
-.text-secondary {
-    color: var(--cor-terciaria) !important;
+.navbar {
+    flex-wrap: nowrap !important;
 }
 
-.bg-primary {
-    background-color: var(--cor-primaria) !important;
+.logo {
+    min-width: 125px;
 }
 
-.musica-destaque {
+.destaque {
     height: 600px;
 }
 
@@ -44,36 +101,68 @@
     font-size: 3em;
 }
 
+.botao {
+    background-color: var(--cor-secundaria);
+}
+
 .botao:hover {
     background-color: #462640 !important;
 }
 
-.categorias {
-    max-width: calc(100vw - 300px) !important;
+.carousel-item-start .carousel-caption {
+    display: none !important;
 }
 
-.categorias li:hover {
-    transform: scale(1.13);
+.carousel-item-end .carousel-caption {
+    display: none !important;
+}
+
+@media screen and (max-width: 992px) {
+    .carousel-item img {
+        filter: blur(3px) grayscale(40%);
+    }
+    .carousel-caption {
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.445);
+        height: 100%;
+    }
+    .carousel-caption p {
+        color: white !important;
+    }
+}
+
+.nav-generos {
+    background-color: var(--cor-primaria);
+}
+
+.nav-generos li:hover {
+    scale: 1.1;
+    transition: .3s;
 }
 
 .musicas-card {
-    width: 100px;
+    background-color: var(--cor-secundaria);
+    transition: 0.3s;
 }
 
 .musicas-card:hover {
-    transform: scale(1.03);
+    scale: 1.05;
 }
 
-.musicas-card img, .aspect-ratio-1x1 {
+.musicas-card img {
     aspect-ratio: 1 / 1;
 }
 
-.icon-musica.material-symbols-outlined {
-    font-size: 1.5em;
-    color: var(--cor-terciaria);
+/* Página música */
+
+.main-musica .material-symbols-outlined {
+    font-size: 1.6em;
 }
 
-.luz {
+.capa-musica {
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    width: 50vw;
     box-shadow: 0 0 50px var(--cor-secundaria);
 }
 
@@ -81,9 +170,96 @@
     text-shadow: 4px 5px 4px var(--cor-secundaria);
 }
 
-.musica h1 {
-    font-size: 3em;
+/* Página config */
+
+.p-configuracoes {
+    color: var(--cor-terciaria);
 }
+
+.select-idioma {
+    border-color: var(--cor-secundaria);
+    border-width: 2px;
+    /* background-color: transparent; */
+    background-color: var(--cor-secundaria);
+    max-width: 300px;
+}
+
+.form-switch.form-switch-md {
+    margin-bottom: 1rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-md .form-check-input {
+    background-color: transparent;
+    border-color: white !important;
+    height: 1.5rem;
+    width: calc(2rem + 0.75rem);
+    border-radius: 3rem;
+}
+
+.form-switch.form-switch-md .form-check-input:checked {
+    background-color: var(--cor-secundaria) !important;
+
+}
+
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+}
+
+.form-control-plaintext {
+    color: var(--cor-terciaria);
+}
+
+/* Página Conta */
+
+div:has(.img-conta) {
+    min-width: 300px !important;
+}
+
+.informacoes-conta:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+/* Página Login */
+
+.main-login {
+    color: var(--cor-terciaria);
+}
+
+.button-form {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    &:hover {
+        background-color: var(--cor-terciaria);
+        color: var(--cor-secundaria);
+    }
+}
+
+.btn-password {
+    color: var(--cor-terciaria);
+    border-color: currentColor;
+    &:hover {
+        background-color: var(--cor-terciaria);
+        color: var(--cor-primaria);
+    }
+}
+
+/* Biblioteca */
+
+.playlist {
+    background-color: var(--cor-secundaria);
+    transition: .4s;
+    &:hover {
+        scale: 1.01;
+    }
+}
+
+.capa-playlist {
+    width: 120px;
+    aspect-ratio: 1/1;
+}
+
+/* Scroll */
 
 ::-webkit-scrollbar {
     background: var(--cor-primaria);
@@ -101,7 +277,7 @@
     background-color: var(--cor-terciaria);
 }
 
-body::-webkit-scrollbar-button:single-button {
+::-webkit-scrollbar-button:single-button {
     /* Botões de subir e descer a barra de rolagem */
     display: block;
     background-size: 10px;
