@@ -19,6 +19,7 @@
   <ul>
      <li>Bootstrap</li>
   </ul>
+  <li>JavaScript</li>
 </ul>
 
 ## 5. Imagens
